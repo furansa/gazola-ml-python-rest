@@ -13,7 +13,7 @@ the model documentation and a Swagger interface as well.
 The system is deployed using Docker to make it self-contained and allow
 scalability across multiple environments.
 
-## Running inside Docker
+## Running
 To build and run the application, clone the repository and run in a terminal
 from the same directory where the ```docker-compose.yml``` file is:
 

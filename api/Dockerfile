@@ -1,0 +1,19 @@
+FROM python:3.8
+
+WORKDIR /api
+
+COPY ./Pipfile /api/
+
+# TODO: Check for automated version number control
+LABEL version="0.0.1" \
+      description="Gazola Machine Learning REST API"
+
+# Ensures that the python output is set straight to the terminal without
+# buffering it first
+ENV PYTHONUNBUFFERED 1
+
+# Update the system and install required packages
+RUN apt-get update && apt-get upgrade -y && apt-get clean && \
+pip3 install --upgrade pip && pip3 install pipenv && pipenv install --dev --skip-lock --system
+
+ENTRYPOINT ["/api/entrypoint.sh"]

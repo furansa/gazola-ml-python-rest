@@ -1,0 +1,21 @@
+version: "3.6"
+
+services:
+    api:
+        container_name: gazola_ml_python_rest
+        image: gazola_ml_python_rest:0.0.1
+        build: ./api
+        networks:
+            - gazola_ml_python_rest_public
+        ports:
+            - 8000:8000
+        volumes:
+            - ./api:/api
+        healthcheck:
+            test: ["CMD-SHELL", "uptime"]
+            interval: 30s
+            retries: 3
+
+networks:
+    gazola_ml_python_rest_public:
+        name: gazola_ml_python_rest_public_network

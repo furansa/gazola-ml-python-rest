@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = "3.8"
+
+[packages]
+connexion = "*"
+flask = "*"
+pyjwt = "*"
+structlog = "*"
+swagger-ui-bundle = "*"
+
+[dev-packages]
+coverage = "*"
+matplotlib = "==3.1.2"
+pandas = "==0.25.3"
+pytest = "*"
+scikit-learn = "==0.22.2"

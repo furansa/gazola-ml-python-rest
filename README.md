@@ -25,5 +25,3 @@ To stop the application, run from the same directory:
 ```
 $ docker-compose stop
 ```
-
-## Submiting code

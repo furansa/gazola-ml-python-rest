@@ -12,9 +12,10 @@ services:
         volumes:
             - ./api:/api
         healthcheck:
-            test: ["CMD-SHELL", "uptime"]
-            interval: 30s
+            test: ["CMD", "/api/utils/health_checker.py"]
+            interval: 10s
             retries: 3
+            start_period: 30s
 
 networks:
     gazola_ml_python_rest_public:

@@ -12,7 +12,7 @@ paths:
     /status:
         get:
             summary: Service's status
-            description: Return service monitoring status
+            description: Return application status
             tags:
                 - Monitoring
             operationId: status.read_all

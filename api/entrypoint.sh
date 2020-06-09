@@ -10,11 +10,11 @@
 set -e
 
 # Used for debugging if no foreground application is being called
-while true; do
-   date
-   uptime
-   sleep 5
-done
+# while true; do
+#    date
+#    uptime
+#    sleep 5
+# done
 
 # Call the application in foreground
-# /usr/bin/env python3 gazola.py
+/usr/bin/env python3 gazola.py

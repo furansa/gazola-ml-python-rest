@@ -8,7 +8,7 @@ and this is an academic project as part of my post graduation course in
 Artificial Intelligence and Machine Learning.
 
 Along with the prediction endpoint it's also available a specific endpoint for
-the model documentation and a Swagger interface as well.
+the model documentation and a Swagger/OpenAPI interface as well.
 
 The system is deployed using Docker to make it self-contained and allow
 scalability across multiple environments.
@@ -25,3 +25,7 @@ To stop the application, run from the same directory:
 ```
 $ docker-compose stop
 ```
+
+## Accessing
+After build and run it's possible to explore the API by using the Swagger/OpenAPI
+Web interface at [http://localhost:8000/v1/ui/](http://localhost:8000/v1/ui/).

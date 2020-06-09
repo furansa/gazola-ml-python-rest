@@ -1,6 +1,6 @@
 # Gazola Machine Learning REST API
 This RESTful Web service provides endpoints to access a Machine Learning model
-trained to predict apartment's prices in São Paulo state, based on some features
+trained to predict apartment's prices in São Paulo city, based on some features
 like total area.
 
 The model was trained using Gazola's dataset that can be accessed [here](),

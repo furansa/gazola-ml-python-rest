@@ -18,7 +18,6 @@ app = connexion.App(__name__, specification_dir=SPEC_DIR)
 app.add_api(API_FILE)
 
 # Run the application in stand alone mode
-# FIXME: Do not run application as root
 if __name__ == "__main__":
     logger.info("Starting application")
     app.run(host=APP_HOST, port=APP_PORT, debug=DEBUG_MODE)

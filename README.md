@@ -13,6 +13,8 @@ the model documentation and a Swagger/OpenAPI interface as well.
 The system is deployed using Docker to make it self-contained and allow
 scalability across multiple environments.
 
+This is currently a **work in progress**.
+
 ## Running
 To build and run the application, clone the repository and run in a terminal
 from the same directory where the ```docker-compose.yml``` file is:
@@ -29,3 +31,5 @@ $ docker-compose stop
 ## Accessing
 After build and run it's possible to explore the API by using the Swagger/OpenAPI
 Web interface at [http://localhost:8000/v1/ui/](http://localhost:8000/v1/ui/).
+
+## References

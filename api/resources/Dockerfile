@@ -20,4 +20,4 @@ pip3 install --upgrade pip && pip3 install pipenv && pipenv install --dev --skip
 # Run the application as unprivileged user
 USER gazola
 
-ENTRYPOINT ["/api/entrypoint.sh"]
+ENTRYPOINT ["/api/resources/entrypoint.sh"]

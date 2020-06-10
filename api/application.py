@@ -2,7 +2,7 @@ import connexion
 import structlog
 
 # Application configuration
-SPEC_DIR = "./"
+SPEC_DIR = "./resources/"
 API_FILE = "openapi.yaml"
 APP_HOST = "0.0.0.0"
 APP_PORT = 8000

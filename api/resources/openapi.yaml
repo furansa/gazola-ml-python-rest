@@ -15,7 +15,7 @@ paths:
             description: Return application status
             tags:
                 - Monitoring
-            operationId: status.read_all
+            operationId: controllers.status.read_all
             responses:
                 200:
                     description: Successful read operation

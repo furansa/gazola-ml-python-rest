@@ -4,7 +4,7 @@ services:
     api:
         container_name: gazola_ml_python_rest
         image: gazola_ml_python_rest:0.0.1
-        build: ./api
+        build: ./api/resources
         networks:
             - gazola_ml_python_rest_public
         ports:
@@ -12,7 +12,7 @@ services:
         volumes:
             - ./api:/api
         healthcheck:
-            test: ["CMD", "/api/utils/health_checker.py"]
+            test: ["CMD", "/api/resources/health_checker.py"]
             interval: 10s
             retries: 3
             start_period: 30s

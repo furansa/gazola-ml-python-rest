@@ -17,4 +17,4 @@ set -e
 # done
 
 # Call the application in foreground
-/usr/bin/env python3 gazola.py
+/usr/bin/env python3 application.py

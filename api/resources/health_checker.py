@@ -2,7 +2,7 @@
 #
 # @file      health_checker.py
 # @version   0.0.1
-# @brief     Check application's health without using 3rd external tools
+# @brief     Check application's health without using external tools
 #
 # ------------------------------------------------------------------------------
 #
@@ -21,7 +21,7 @@ def check_service_status(url: str) -> int:
     :return: 0 if healthy, otherwise 1
     :rtype: int
     """
-    with urllib.request.urlopen(url, timeout = 5) as response:
+    with urllib.request.urlopen(url, timeout=5) as response:
         http_response_code = response.getcode()
         http_response_data = json.loads(response.read().decode("utf8"))
         service_status = http_response_data["status"]

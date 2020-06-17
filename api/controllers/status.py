@@ -1,9 +1,13 @@
+import os
+
 from flask import jsonify, Response
 
 
 # Example set of status
+APP_VERSION = os.environ["APP_VERSION"]
+
 STATUS = {
-    "version": "1.0.0",
+    "version": APP_VERSION,
     "status": "healthy",
 }
 

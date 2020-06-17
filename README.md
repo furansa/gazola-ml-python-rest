@@ -17,10 +17,11 @@ This is currently a **work in progress**.
 
 ## Running
 To build and run the application, clone the repository and run in a terminal
-from the same directory where the ```docker-compose.yml``` file is:
+from the same directory where the ```docker-compose-{environment}.yaml``` file
+is, where *environment* can be *dev*, *test*, *prod* or whatever:
 
 ```shell
-$ docker-compose up
+$ docker-compose -f docker-compose-dev.yaml up
 ```
 To stop the application, run from the same directory:
 
@@ -33,3 +34,4 @@ After build and run it's possible to explore the API by using the Swagger/OpenAP
 Web interface at [http://localhost:8000/v1/ui/](http://localhost:8000/v1/ui/).
 
 ## References
+* [The Twelve-Factor App](https://12factor.net)

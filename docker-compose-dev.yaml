@@ -2,6 +2,14 @@ version: "3.6"
 
 services:
     api:
+        environment:
+            - APP_API_FILE=openapi_v1_0_0.yaml
+            - APP_DEBUG_MODE=True
+            - APP_HOST=0.0.0.0
+            - APP_PORT=8000
+            - APP_SPEC_DIR=./resources
+            - APP_VERSION=1.0.0
+            - PYTHONUNBUFFERED=1
         container_name: gazola_ml_python_rest
         image: gazola_ml_python_rest:0.0.1
         build: ./api/resources

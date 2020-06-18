@@ -9,7 +9,6 @@ python_version = "3.8"
 [packages]
 connexion = "*"
 flask = "*"
-pyjwt = "*"
 structlog = "*"
 swagger-ui-bundle = "*"
 

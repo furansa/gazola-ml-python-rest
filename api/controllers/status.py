@@ -14,7 +14,7 @@ STATUS = {
 
 def read_all() -> Response:
     """
-    Read and returns all health status, supports HTTP GET.
+    Read and return all health status, supports HTTP GET.
 
     :return: All status information
     :rtype: Response

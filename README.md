@@ -23,15 +23,27 @@ is, where *environment* can be *dev*, *test*, *prod* or whatever:
 ```shell
 $ docker-compose -f docker-compose-dev.yaml up
 ```
+
 To stop the application, run from the same directory:
 
 ```
 $ docker-compose stop
 ```
 
+## Testing
+The specific ```docker-compose-test.yaml``` file was made to run unit tests with
+*PyTest* and generate both test and coverage reports inside the *tests* directory:
+
+```shell
+$ docker-compose -f docker-compose-test.yaml up
+```
+
+This should start the container, run the tests, generate the reports and exit.
+
 ## Accessing
 After build and run it's possible to explore the API by using the Swagger/OpenAPI
 Web interface at [http://localhost:8000/v1/ui/](http://localhost:8000/v1/ui/).
 
 ## References
+* [The Team Data Science Process lifecycle](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle)
 * [The Twelve-Factor App](https://12factor.net)

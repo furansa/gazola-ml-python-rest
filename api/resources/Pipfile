@@ -14,8 +14,9 @@ structlog = "*"
 swagger-ui-bundle = "*"
 
 [dev-packages]
-coverage = "*"
 matplotlib = "==3.1.2"
 pandas = "==0.25.3"
 pytest = "*"
+pytest-cov = "*"
+pytest-html = "*"
 scikit-learn = "==0.22.2"

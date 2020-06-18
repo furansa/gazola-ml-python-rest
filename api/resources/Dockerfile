@@ -4,7 +4,8 @@ WORKDIR /api
 
 COPY ./Pipfile /api/
 
-LABEL description="Gazola Machine Learning REST API"
+ARG IMAGE_DESCRIPTION
+LABEL Description=${IMAGE_DESCRIPTION}
 
 # Update the system and install required packages
 ARG PIP_OPTIONS

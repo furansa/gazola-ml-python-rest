@@ -16,7 +16,7 @@ services:
             context: ./api/resources
             args:
             - PIP_OPTIONS=--skip-lock --system
-            - IMAGE_DESCRIPTION=Gazola Machine Learning REST API
+            - IMAGE_DESCRIPTION=Gazola Machine Learning REST API, production image
         networks:
             - gazola_ml_python_rest_public
         ports:

@@ -1,0 +1,35 @@
+version: "3.6"
+
+services:
+    api:
+        environment:
+            - APP_API_FILE=openapi_v1_0_0.yaml
+            - APP_DEBUG_MODE=True
+            - APP_HOST=0.0.0.0
+            - APP_PORT=8000
+            - APP_SPEC_DIR=./resources
+            - APP_TEST_MODE=True
+            - APP_VERSION=1.0.0
+            - PYTHONUNBUFFERED=1
+        container_name: gazola_ml_python_rest
+        image: gazola_ml_python_rest:test
+        build:
+            context: ./api/resources
+            args:
+            - PIP_OPTIONS=--dev --skip-lock --system
+            - IMAGE_DESCRIPTION=Gazola Machine Learning REST API, test image
+        networks:
+            - gazola_ml_python_rest_public
+        ports:
+            - 8000:8000
+        volumes:
+            - ./api:/api
+        healthcheck:
+            test: ["CMD", "/api/resources/health_checker.py"]
+            interval: 10s
+            retries: 3
+            start_period: 30s
+
+networks:
+    gazola_ml_python_rest_public:
+        name: gazola_ml_python_rest_public_network

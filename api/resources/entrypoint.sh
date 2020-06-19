@@ -12,7 +12,6 @@ set -e
 # Used for debugging if no foreground application is being called
 # while true; do
 #    date
-#    uptime
 #    sleep 5
 # done
 

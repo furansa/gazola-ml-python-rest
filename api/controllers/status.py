@@ -3,7 +3,6 @@ import os
 from flask import jsonify, Response
 
 
-# Example set of status
 APP_VERSION = os.environ["APP_VERSION"]
 
 STATUS = {
@@ -17,6 +16,6 @@ def read_all() -> Response:
     Read and return all health status, supports HTTP GET.
 
     :return: All status information
-    :rtype: Response
+    :rtype: Response (JSON)
     """
     return jsonify(STATUS)

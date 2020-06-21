@@ -44,6 +44,16 @@ This should start the container, run the tests, generate the reports and exit.
 After build and run it's possible to explore the API by using the Swagger/OpenAPI
 Web interface at [http://localhost:8000/v1/ui/](http://localhost:8000/v1/ui/).
 
+## Structure
+Here is how the project is structured:
+
+* **/controllers**: Responsible for handling HTTP request and response
+* **/ml**: Where the machine learning models resides to be accessed by the controllers, we can think as our business layer
+* **/resources**: Configuration and stand-alone scripts for tooling
+* **/tests**: Unit and system tests, coverage and test reports
+* **application.py**: Application setup and starting point
+
 ## References
 * [The Team Data Science Process lifecycle](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle)
 * [The Twelve-Factor App](https://12factor.net)
+* [OpenAPI Specification](https://swagger.io/docs/specification)

@@ -18,10 +18,45 @@ paths:
             operationId: controllers.status.read_all
             responses:
                 200:
-                    description: Successful read operation
+                    description: Successful operation
                     content:
                         application/json:
                             schema:
                                 type: array
                                 items:
                                     type: string
+    /predict:
+        post:
+            summary: Predict price based on given features
+            description: Return the apartment's price predicted by the model
+            tags:
+                - Prediction
+            operationId: controllers.prediction.predict
+            parameters:
+                - name: dataset
+                  in: body
+                  description: Set of data to feed the model
+                  required: True
+                  schema:
+                      type: object
+                      properties:
+                          age:
+                              type: integer
+                              description: Apartment's age in years
+                          size:
+                              type: integer
+                              description: Apartment's size in squared meters (m2)
+                      example:
+                          age: 25
+                          size: 100
+            responses:
+                200:
+                    description: Successful operation
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    type: string
+                            example:
+                                price: 1000.00

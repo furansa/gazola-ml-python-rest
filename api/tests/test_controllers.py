@@ -1,7 +1,11 @@
 import pytest  # noqa
 
-from ..controllers import status  # noqa
+from ..controllers import status, prediction  # noqa
 
 
 def test_status():
-    pass
+    return False
+
+
+def test_prediction():
+    return False

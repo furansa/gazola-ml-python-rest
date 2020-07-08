@@ -16,7 +16,8 @@ def predict(dataset: Dict) -> Dict:
     :return: Predicted price
     :rtype: Dict
     """
-    logger.info("Starting prediction")
+    logger.info("Starting prediction on received dataset:")
+    logger.info(dataset)
 
     RESULT = {
         "price": 999.99,

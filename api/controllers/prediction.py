@@ -1,9 +1,9 @@
-from flask import jsonify, Response, Request
+from flask import jsonify, request, Response
 
 from ml import linear_regression
 
 
-def predict(dataset: Request) -> Response:
+def predict() -> Response:
     """
     Return the apartment's price predicted by the model, supports HTTP POST.
 
@@ -13,7 +13,7 @@ def predict(dataset: Request) -> Response:
     :return: Predicted price
     :rtype: Response (JSON)
     """
-    dataset = dict()
+    dataset = request.json
     model = linear_regression
 
-    return jsonify(model.predict(dataset))
+    return jsonify(model.predict(dataset)), 200

@@ -17,7 +17,7 @@ logger = structlog.get_logger()
 app = connexion.App(__name__, specification_dir=APP_SPEC_DIR)
 
 # Read the OpenAPI file to configure the API endpoints
-app.add_api(APP_API_FILE)
+app.add_api(APP_API_FILE, validate_responses=True)
 
 # Run the application in stand alone mode
 if __name__ == "__main__":

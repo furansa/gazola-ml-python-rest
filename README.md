@@ -54,6 +54,9 @@ Here is how the project is structured:
 * **application.py**: Application setup and starting point
 
 ## References
+* [Connexion](https://github.com/zalando/connexion)
+* [Connexion's documentation](https://connexion.readthedocs.io)
+* [OpenAPI Specification](https://swagger.io/docs/specification)
+* [Swagger](https://github.com/swagger-api)
 * [The Team Data Science Process lifecycle](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle)
 * [The Twelve-Factor App](https://12factor.net)
-* [OpenAPI Specification](https://swagger.io/docs/specification)

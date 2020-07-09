@@ -1,4 +1,6 @@
 # Gazola Machine Learning REST API
+![Smoke test](https://github.com/furansa/gazola-ml-python-rest/workflows/Smoke%20test/badge.svg?branch=master)
+
 This RESTful Web service provides endpoints to access a Machine Learning model
 trained to predict apartment's prices in São Paulo city, based on some features
 like total area.

@@ -1,0 +1,15 @@
+name: Smoke test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run test suite and generate report
+      run: docker-compose -f docker-compose-test.yaml up

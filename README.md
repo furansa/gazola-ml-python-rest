@@ -32,6 +32,25 @@ To stop the application, run from the same directory:
 $ docker-compose stop
 ```
 
+## Accessing
+After build and run it's possible to explore the API by using the Swagger/OpenAPI
+Web interface at [http://localhost:8000/v1/ui/](http://localhost:8000/v1/ui/).
+
+## Monitoring
+All the application's log will be sent to an Elasticsearch instance. The main goal
+here is to provide a real time log stream that can be monitored using Kibana.
+
+Since this work is in the very beginning stage, I've created a separated docker
+compose file. To call the application along with the future ELK stack (Logstash will
+be added later), run:
+
+```shell
+$ docker-compose -f docker-compose-dev-elk.yaml up
+```
+
+Elasticsearch will be available at *http://localhost:9200* and Kibana at
+*http://localhost:5601*.
+
 ## Testing
 The specific ```docker-compose-test.yaml``` file was made to run unit tests with
 *PyTest* and generate both test and coverage reports inside the *tests* directory:
@@ -41,10 +60,6 @@ $ docker-compose -f docker-compose-test.yaml up
 ```
 
 This should start the container, run the tests, generate the reports and exit.
-
-## Accessing
-After build and run it's possible to explore the API by using the Swagger/OpenAPI
-Web interface at [http://localhost:8000/v1/ui/](http://localhost:8000/v1/ui/).
 
 ## Structure
 Here is how the project is structured:

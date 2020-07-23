@@ -5,9 +5,9 @@ This RESTful Web service provides endpoints to access a Machine Learning model
 trained to predict apartment's prices in São Paulo city, based on some features
 like total area.
 
-The model was trained using Gazola's dataset that can be accessed [here](),
-and this is an academic project as part of my post graduation course in
-Artificial Intelligence and Machine Learning.
+The model was trained using Gazola apartment's prices dataset, and this is an
+academic project part of my post graduation course in Artificial Intelligence
+and Machine Learning.
 
 Along with the prediction endpoint it's also available a specific endpoint for
 the model documentation and a Swagger/OpenAPI interface as well.

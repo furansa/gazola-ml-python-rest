@@ -48,8 +48,8 @@ be added later), run:
 $ docker-compose -f docker-compose-dev-elk.yaml up
 ```
 
-Elasticsearch will be available at *http://localhost:9200* and Kibana at
-*http://localhost:5601*.
+Elasticsearch will be available at [http://localhost:9200](http://localhost:9200)
+and Kibana at [http://localhost:5601](http://localhost:5601).
 
 ## Testing
 The specific ```docker-compose-test.yaml``` file was made to run unit tests with
